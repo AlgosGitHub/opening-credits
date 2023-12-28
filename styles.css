@@ -20,10 +20,12 @@ body, html {
 }
 
 .foreground {
+    z-index: 10;
     animation: moveForeground 12s linear infinite;
 }
 
 .background {
+    z-index: 0;
     filter: grayscale(30%) blur(2px); /* Apply 30% grayscale filter and 2 pixel blur */
 
     /* Start with -10% offset and scale to 110% */
@@ -31,34 +33,40 @@ body, html {
     animation: moveBackground 12s linear infinite;
 }
 
+@font-face {
+    font-family: 'Pricedown';
+    src: url('pricedown bl.otf') format('opentype');
+}
+
 /* style.css */
 .title {
     position: absolute;
     color: white;
-    font-family: Helvetica;
-    z-index: 10;
+    font-family: Pricedown;
+    z-index: 5;
 }
 
 #algo-title {
     left: 25%;
-    top: 13%;
+    top: 7%;
 }
 
 #jess-title {    
     right: 33%;
-    top: 13%;
+    top: 10%;
 }
+
 
 .title span {
     display: block;
     text-align: center;
-    font-weight: bold;
-    font-size: 36px; /* Smaller font size for 'Starring:' */
+    font-family: "Arial Black";
+    font-size: 36pt; /* Smaller font size for 'Starring:' */
 }
 
 .title {
-    font-size: 98px; /* Larger font size for the character name */
-    font-weight: bold;
+    font-size: 98pt; /* Larger font size for the character name */
+    font-weight: normal;
 }
 
 #blackOverlay {
