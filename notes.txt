@@ -1,0 +1,10 @@
+Each character is one folder.
+Fg.png
+bg.png
+credit.txt
+
+
+credit.txt-----
+Starring
+AlgoBro
+-------------

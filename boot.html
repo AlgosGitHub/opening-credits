@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fade Transition</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: black;
+        }
+
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .slide img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide" id="slide1">
+        <h1 style="color: white;">Onomato-Automata Entertainment Presents</h1>
+    </div>
+    <div class="slide" id="slide2">
+        <img src="logo.png" alt="Slide 2">
+    </div>
+
+    <script>
+        const slide1 = document.getElementById("slide1");
+        const slide2 = document.getElementById("slide2");
+
+        // Function to fade in a slide
+        function fadeIn(slide) {
+            slide.style.opacity = 1;
+        }
+
+        // Function to fade out a slide
+        function fadeOut(slide) {
+            slide.style.opacity = 0;
+        }
+
+        // Start the transition
+        setTimeout(() => {
+            fadeIn(slide1);
+
+            // Fade to black
+            setTimeout(() => {
+                fadeOut(slide1);
+                
+                // Fade from black to slide 2
+                setTimeout(() => {
+                    fadeIn(slide2);
+                
+                  // Fade from black to slide 2
+                  setTimeout(() => {
+                      fadeOut(slide2);
+                      setTimeout(() => {
+                          window.obsstudio.setCurrentScene("Opening Credits");
+                      }, 2000); // 1000ms = 1 second
+                  }, 6000); // 1000ms = 1 second
+                }, 3000); // 1000ms = 1 second
+            }, 6000); // 1000ms = 1 second
+        }, 3000); // 1000ms = 1 second
+    </script>
+</body>
+</html>

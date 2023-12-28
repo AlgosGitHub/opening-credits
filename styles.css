@@ -1,0 +1,85 @@
+/* style.css */
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.character {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.background, .foreground {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.foreground {
+    animation: moveForeground 12s linear infinite;
+}
+
+.background {
+    filter: grayscale(30%) blur(2px); /* Apply 30% grayscale filter and 2 pixel blur */
+
+    /* Start with -10% offset and scale to 110% */
+    transform: translateX(-10%) scale(1.1);
+    animation: moveBackground 12s linear infinite;
+}
+
+/* style.css */
+.title {
+    position: absolute;
+    color: white;
+    font-family: Helvetica;
+    z-index: 10;
+}
+
+#algo-title {
+    left: 25%;
+    top: 13%;
+}
+
+#jess-title {    
+    right: 33%;
+    top: 13%;
+}
+
+.title span {
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    font-size: 36px; /* Smaller font size for 'Starring:' */
+}
+
+.title {
+    font-size: 98px; /* Larger font size for the character name */
+    font-weight: bold;
+}
+
+#blackOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0;
+    z-index: 20;
+    transition: opacity 300ms ease-in-out;
+}
+
+/* Parallax animations */
+@keyframes moveForeground {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-10%) scale(1.06); }
+}
+
+@keyframes moveBackground {
+    0% { transform: translateX(-5%) scale(1.1); }
+    100% { transform: translateX(0) scale(1.04); }
+}
