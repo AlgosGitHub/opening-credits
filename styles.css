@@ -38,14 +38,6 @@ body, html {
     src: url('pricedown bl.otf') format('opentype');
 }
 
-/* style.css */
-.title {
-    position: absolute;
-    color: white;
-    font-family: Pricedown;
-    z-index: 5;
-}
-
 #mario-title {
     right: 7%;
     bottom: 16%;
@@ -67,26 +59,6 @@ body, html {
     top: 27%;
 }
 
-
-.title span {
-    display: block;
-    text-align: center;
-    font-family: "Arial Black";
-    opacity: 77%;
-    font-size: 28pt; /* Smaller font size for 'Starring:' */
-}
-
-.title {
-    font-size: 128pt; /* Larger font size for the character name */
-    font-weight: normal;
-    line-height: 84px;
-    text-shadow:
-            -1px -1px 0 #000, /* Top-left shadow */
-            1px -1px 0 #000, /* Top-right shadow */
-            -1px 1px 0 #000, /* Bottom-left shadow */
-            1px 1px 0 #000; /* Bottom-right shadow */
-}
-
 #blackOverlay {
     position: fixed;
     top: 0;
@@ -99,7 +71,7 @@ body, html {
     transition: opacity 300ms ease-in-out;
 }
 
-.new-title {
+.title-text-box {
     position: absolute;
     text-align: center;
     color: white;
