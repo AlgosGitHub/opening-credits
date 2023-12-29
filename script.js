@@ -27,3 +27,6 @@ document.addEventListener('DOMContentLoaded', () => {
     setInterval(cycleCharacters, 11700); // Character display time + fade duration
 
 });
+
+// Fade in the first character
+blackOverlay.style.opacity = 0;
