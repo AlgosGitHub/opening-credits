@@ -38,17 +38,9 @@ body, html {
     src: url('pricedown bl.otf') format('opentype');
 }
 
-/* style.css */
-.title {
-    position: absolute;
-    color: white;
-    font-family: Pricedown;
-    z-index: 5;
-}
-
 #mario-title {
     right: 7%;
-    bottom: 12%;
+    bottom: 16%;
 }
 
 #algo-title {
@@ -62,23 +54,9 @@ body, html {
 }
 
 
-.title span {
-    display: block;
-    text-align: center;
-    font-family: "Arial Black";
-    opacity: 77%;
-    font-size: 28pt; /* Smaller font size for 'Starring:' */
-}
-
-.title {
-    font-size: 128pt; /* Larger font size for the character name */
-    font-weight: normal;
-    line-height: 84px;
-    text-shadow:
-            -1px -1px 0 #000, /* Top-left shadow */
-            1px -1px 0 #000, /* Top-right shadow */
-            -1px 1px 0 #000, /* Bottom-left shadow */
-            1px 1px 0 #000; /* Bottom-right shadow */
+#charlie-title {
+    left: 9%;
+    top: 27%;
 }
 
 #blackOverlay {
@@ -88,9 +66,54 @@ body, html {
     width: 100%;
     height: 100%;
     background-color: black;
-    opacity: 0;
+    opacity: 1; /* blackout by default */
     z-index: 20;
     transition: opacity 300ms ease-in-out;
+}
+
+.title-text-box {
+    position: absolute;
+    text-align: center;
+    color: white;
+    font-family: Pricedown;
+    display: flex;
+    flex-direction: column;
+    line-height: 0px;
+    z-index: 5;
+    text-shadow:
+            -1px -1px 0 #000, /* Top-left shadow */
+            1px -1px 0 #000, /* Top-right shadow */
+            -1px 1px 0 #000, /* Bottom-left shadow */
+            1px 1px 0 #000; /* Bottom-right shadow */
+}
+
+.title-credit-text {
+    font-family: "Arial Black";
+    font-size: 28pt; /* Smaller font size for 'Starring:' */
+    opacity: 77%;
+}
+
+.title-credit-name {
+    margin-top: 86px;
+    font-size: 128pt; /* Larger font size for the character name */
+    font-weight: normal;
+    color: white;
+    font-family: Pricedown;
+}
+
+.title-interstitial-text {
+    margin-top: 135px;
+    font-family: "Arial Black";
+    font-size: 28pt;
+    opacity: 77%;
+}
+
+.title-blurb-text {
+    margin-top: 69px;
+    font-size: 94pt; /* Larger font size for the character name */
+    font-weight: normal;
+    color: white;
+    font-family: Pricedown;
 }
 
 /* Parallax animations */
